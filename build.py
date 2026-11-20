@@ -100,7 +100,7 @@ def header(prefix, current):
       </div>
     </nav>
     <div class="header-cta">
-      <a class="phone" href="{PHONE_HREF}">{PHONE}</a>
+      <a class="btn ghost" href="{PHONE_HREF}" aria-label="Call us on {PHONE}">{I_PHONE} Call Us</a>
       <a class="btn" href="{prefix}aerial-drone-photgraphy-north-west/">Contact Us {ARROW}</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="t-open">Menu</span><span class="t-close">Close</span><span class="bars" aria-hidden="true"><i></i><i></i></span></button>
     </div>
