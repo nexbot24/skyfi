@@ -156,7 +156,7 @@ def hero(prefix, img, title_html, intro_html, crumbs=None, actions=True, short=F
     if actions:
         act = f"""<div class="hero-actions">
         <a class="btn" href="#contact">Get a Quote {ARROW}</a>
-        <a class="btn ghost" href="{PHONE_HREF}">{PHONE}</a>
+        <a class="btn ghost" href="{PHONE_HREF}" aria-label="Call us on {PHONE}">{I_PHONE} Call Us</a>
       </div>"""
     return f"""
 <section class="hero{" short" if short else ""}">
