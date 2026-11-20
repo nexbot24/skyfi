@@ -272,6 +272,8 @@ h3 { font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.2; letter-spacing: 
 .menu-open .menu-toggle .t-close { display: inline; }
 
 .drop-panel .thumb { display: none; }
+/* Desktop has the Contact Us button; keep the link only in the mobile menu */
+@media (min-width: 921px) { .nav .nav-contact { display: none; } }
 .nav .mobile-cta { display: none; }
 
 

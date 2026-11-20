@@ -92,7 +92,7 @@ def header(prefix, current):
         <div class="drop-panel">{items}</div>
       </div>
       <a href="{prefix}about-us-drone-photography/"{cur("about")}>About Us</a>
-      <a href="{prefix}aerial-drone-photgraphy-north-west/"{cur("contact")}>Contact</a>
+      <a class="nav-contact" href="{prefix}aerial-drone-photgraphy-north-west/"{cur("contact")}>Contact</a>
       <div class="mobile-cta">
         <a class="btn" href="{prefix}aerial-drone-photgraphy-north-west/">Get a Quote {ARROW}</a>
         <a class="btn ghost" href="{PHONE_HREF}">Call us</a>
