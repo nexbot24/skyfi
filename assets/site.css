@@ -21,7 +21,7 @@
   --blue: #2758f3;
   --num: #2758f3;
 
-  --font: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --wrap: 1240px;
@@ -44,7 +44,7 @@ body {
   font-family: var(--font);
   font-size: 17px;
   line-height: 1.6;
-  font-stretch: 100%;
+  font-feature-settings: "cv11", "ss01";
   -webkit-font-smoothing: antialiased;
 }
 
@@ -55,10 +55,10 @@ p:last-child { margin-bottom: 0; }
 
 h1, h2, h3, h4 {
   margin: 0;
-  font-weight: 700;
-  font-stretch: 115%;
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-optical-sizing: auto;
   text-wrap: balance;
 }
 
@@ -120,8 +120,7 @@ h3 { font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.2; letter-spacing: 
   border-radius: var(--radius);
   background: var(--bg);
   color: var(--fg);
-  font: 600 15px/1 var(--font);
-  font-stretch: 110%;
+  font: 500 15px/1 var(--font);
   letter-spacing: 0.01em;
   text-decoration: none;
   cursor: pointer;
@@ -290,7 +289,7 @@ h3 { font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.2; letter-spacing: 
   .menu-open .site-header { background: var(--white); }
   .menu-open .site-header .bar { height: 68px; }
   .nav > a, .nav .drop > button {
-    font-size: 22px; font-stretch: 112%; font-weight: 600;
+    font-size: 22px; font-weight: 600;
     padding: 18px 0; border-radius: 0; width: 100%; justify-content: space-between;
     border-bottom: 1px solid var(--line); opacity: 1;
   }
@@ -576,7 +575,6 @@ h3 { font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.2; letter-spacing: 
   padding: 24px 0;
   font-weight: 600;
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-  font-stretch: 105%;
   line-height: 1.35;
 }
 .faq summary::-webkit-details-marker { display: none; }
@@ -675,7 +673,7 @@ h3 { font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.2; letter-spacing: 
   position: relative;
 }
 .index .n { font-family: var(--mono); font-size: 13px; color: var(--muted-on-dark); }
-.index .t { font-size: clamp(1.6rem, 3.6vw, 3rem); font-weight: 700; font-stretch: 118%; letter-spacing: -0.02em; line-height: 1; transition: transform .4s var(--ease), color .3s; }
+.index .t { font-size: clamp(1.6rem, 3.6vw, 3rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1; transition: transform .4s var(--ease), color .3s; }
 .index .more { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; color: var(--muted-on-dark); transition: color .3s; }
 .index .more svg { width: 16px; height: 16px; }
 .index a:hover .t { transform: translateX(10px); color: var(--orange); }
@@ -879,7 +877,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 }
 .foot-top img { height: 72px; width: auto; margin-bottom: 20px; }
 .foot-top p { color: var(--muted); max-width: 34ch; font-size: 15px; }
-.foot-top h4 { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; font-stretch: 100%; }
+.foot-top h4 { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
 .foot-top ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .foot-top ul a { text-decoration: none; color: var(--ink); font-size: 15px; }
 .foot-top ul a:hover { color: var(--orange); }
