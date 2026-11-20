@@ -14,11 +14,18 @@
 
   // Mobile menu
   var toggle = document.querySelector('.menu-toggle');
+  function setMenu(open) {
+    body.classList.toggle('menu-open', open);
+    if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
   if (toggle) {
-    toggle.addEventListener('click', function () {
-      var open = body.classList.toggle('menu-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.addEventListener('click', function () { setMenu(!body.classList.contains('menu-open')); });
+    // close after choosing a link (also handles in-page anchors like #contact)
+    document.querySelectorAll('.nav a').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
     });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    window.matchMedia('(min-width: 921px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
   }
 
   // "What we do" dropdown: click / keyboard, hover on desktop

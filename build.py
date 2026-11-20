@@ -72,7 +72,7 @@ def header(prefix, current):
     in_services = current in SERVICE_BY_SLUG
     items = "".join(
         f'<a href="{prefix}{s["slug"]}/"{" aria-current=page" if s["slug"] == current else ""}>'
-        f'<span class="n">0{i}</span><strong>{escape(s["name"])}</strong><small>{escape(s["blurb"])}</small></a>'
+        f'<span class="n">0{i}</span><img class="thumb" src="{prefix}assets/img/{s["img"]}" alt="" loading="lazy"><strong>{escape(s["name"])}</strong><small>{escape(s["blurb"])}</small></a>'
         for i, s in enumerate(SERVICES, 1))
 
     def cur(slug):
@@ -85,7 +85,7 @@ def header(prefix, current):
     <a class="brand" href="{prefix}" aria-label="SKYi Drone Photography — home">
       <img src="{prefix}assets/logo.svg" alt="SKYi" width="60" height="60">
     </a>
-    <nav class="nav" aria-label="Main">
+    <nav class="nav" id="site-nav" aria-label="Main">
       <a href="{prefix}"{cur("home")}>Home</a>
       <div class="drop{" current" if in_services else ""}">
         <button type="button" aria-expanded="false" aria-haspopup="true">What We Do {CHEV}</button>
@@ -95,13 +95,14 @@ def header(prefix, current):
       <a href="{prefix}aerial-drone-photgraphy-north-west/"{cur("contact")}>Contact</a>
       <div class="mobile-cta">
         <a class="btn" href="{prefix}aerial-drone-photgraphy-north-west/">Get a Quote {ARROW}</a>
-        <a class="btn ghost" href="{PHONE_HREF}">Call {PHONE}</a>
+        <a class="btn ghost" href="{PHONE_HREF}">Call us</a>
+        <a class="mail" href="mailto:{EMAIL}">{EMAIL}</a>
       </div>
     </nav>
     <div class="header-cta">
       <a class="phone" href="{PHONE_HREF}">{PHONE}</a>
       <a class="btn" href="{prefix}aerial-drone-photgraphy-north-west/">Contact Us {ARROW}</a>
-      <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="t-open">Menu</span><span class="t-close">Close</span><span class="bars" aria-hidden="true"><i></i><i></i></span></button>
     </div>
   </div>
 </header>
